@@ -13,3 +13,7 @@ string = "Message by python!" #target msg
 x_arg = ' //span[contains(@title, ' + target +')]'
 target = wait.until(ec.presence_of_element_located((By.XPATH, x_arg)))
 target.click()
+  
+image_box = browser.find_element_by_xpath('//input[@accept="image/*,video/mkv,video/quicktime"]')
+image_box.send_keys(file_path)sleep(3)send_button = browser.find_element_by_xpath('//span[@data-icon="send-light"]')
+send_button.click()
